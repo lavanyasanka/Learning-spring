@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class ArithmeticOperations {
 	int a=0,b=0,sum=0, diff= 0, prod = 0, div =0;
-	 
-	 public int find_sum(int a, int b) {
 	Scanner in = new Scanner(System.in);
+	 public int find_sum(int a, int b) {
+	
 	System.out.println();
 	System.out.println("Addition of Two Numbers");
 	System.out.println("\n");
@@ -23,7 +23,6 @@ public class ArithmeticOperations {
 	 }
 	 
 	 public int find_diff(int a, int b) {
-	Scanner in = new Scanner(System.in);
 	System.out.println();
 	System.out.println("Difference of Two Numbers");
 	System.out.println("\n");
@@ -40,7 +39,7 @@ public class ArithmeticOperations {
 	 }
 	 
 	 public int find_prod(int a, int b) {
-	Scanner in = new Scanner(System.in);
+	
 	System.out.println();
 	System.out.println("Product of Two Numbers");
 	System.out.println("\n");
@@ -57,7 +56,7 @@ public class ArithmeticOperations {
 	 }
 	 
 	 public int find_div(int a, int b) {
-	Scanner in = new Scanner(System.in);
+
 	System.out.println();
 	System.out.println("Division of Two Numbers");
 	System.out.println("\n");
