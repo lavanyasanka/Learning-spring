@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+	   default-init-method = "init" 
+   default-destroy-method = "destroy">
+
+	<bean class="springcore.HelloWorld" id="helloWorld">
+		<property name="name" value="Lavanya" />
+	</bean>
+	<bean class="springcore.ArithmeticOperations" id="arith">
+	</bean>
+	<bean class="springcore.EmpCollections" id="empcollist">
+		<property name="emplist">
+		<list>
+				<value>Lavanya</value>
+				<value>Sahithi</value>
+				<value>Nicole</value>
+				<value>Co</value>
+				<value>Priya</value>
+				<value>Sajitha</value>
+				<value>Adithi</value>
+				</list>
+		</property>
+	</bean>
+	<bean class="springcore.LifeCycleBean" id="initdes" >
+      <property name = "message" value = "Hi!!!!!! Hello World!"/>
+   </bean>
+</beans>
