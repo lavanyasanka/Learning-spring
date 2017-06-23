@@ -2,29 +2,44 @@
 
 <beans
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
-	   default-init-method = "init" 
-   default-destroy-method = "destroy">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
 
 	<bean class="springcore.HelloWorld" id="helloWorld">
 		<property name="name" value="Lavanya" />
 	</bean>
 	<bean class="springcore.ArithmeticOperations" id="arith">
 	</bean>
-	<bean class="springcore.EmpCollections" id="empcollist">
-		<property name="emplist">
-		<list>
-				<value>Lavanya</value>
-				<value>Sahithi</value>
-				<value>Nicole</value>
-				<value>Co</value>
-				<value>Priya</value>
-				<value>Sajitha</value>
-				<value>Adithi</value>
-				</list>
-		</property>
+		<bean class="springcore.EmpCollections" id="empcol">
+		      <property name = "emplist">
+         <list>
+            <ref bean="emp1"/>
+            <ref bean="emp2"/>
+            <ref bean="emp3"/>
+            <ref bean="emp4"/>
+         </list>
+      </property>
 	</bean>
-	<bean class="springcore.LifeCycleBean" id="initdes" >
-      <property name = "message" value = "Hi!!!!!! Hello World!"/>
-   </bean>
+	<bean class="springcore.Employee" id="emp1">
+		<property name="emp_name" value = "Lavanya"></property>
+		<property name= "emp_id" value = "12"></property>
+		<property name= "emp_sal" value = "12000"></property>
+	</bean>
+		<bean class="springcore.Employee" id="emp2">
+		<property name="emp_name" value = "Nicole"></property>
+		<property name= "emp_id" value = "14"></property>
+		<property name= "emp_sal" value = "14000"></property>
+	</bean>
+	<bean class="springcore.Employee" id="emp3">
+		<property name="emp_name" value = "Sahithi"></property>
+		<property name= "emp_id" value = "13"></property>
+		<property name= "emp_sal" value = "13000"></property>
+	</bean>
+		<bean class="springcore.Employee" id="emp4">
+		<property name="emp_name" value = "Adithi"></property>
+		<property name= "emp_id" value = "15"></property>
+		<property name= "emp_sal" value = "15000"></property>
+	</bean>
+	<bean class="springcore.LifeCycleBean" id="initdes">
+		<property name="message" value="Hi!!!!!! Hello World!" />
+	</bean>
 </beans>
