@@ -42,4 +42,10 @@
 	<bean class="springcore.LifeCycleBean" id="initdes">
 		<property name="message" value="Hi!!!!!! Hello World!" />
 	</bean>
+	    <bean id ="kitty" class="springcore.Cat">
+	    <property name="animal" value ="cat"></property>
+	    </bean>
+    <bean id="vetdoc" class="springcore.Vet" >
+         <constructor-arg ref="kitty"/>
+    </bean>
 </beans>
